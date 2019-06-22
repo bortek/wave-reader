@@ -247,7 +247,9 @@ try:
         # Print data
         #data = [humidity, radon_st_avg, radon_lt_avg, temperature, pressure, CO2_lvl, VOC_lvl]
         data = [humidity, temperature, radon_st_avg, radon_lt_avg, pressure]
-        pipedata = [time.strftime("%Y-%m-%d %H:%M:%S "), humidity, temperature, radon_st_avg, radon_lt_avg, pressure]
+        # Pressure sensor not present on a regular Wave device
+        #pipedata = [time.strftime("%Y-%m-%d %H:%M:%S "), humidity, temperature, radon_st_avg, radon_lt_avg, pressure]
+        pipedata = [time.strftime("%Y-%m-%d %H:%M:%S "), humidity, temperature, radon_st_avg, radon_lt_avg]
         
         if (Mode=='terminal'):
             print tableprint.row(data, width=12)
